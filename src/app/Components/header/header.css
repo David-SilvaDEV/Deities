@@ -1,0 +1,39 @@
+.header-container{
+
+display: flex;
+align-items: center;
+background-color:black;
+/* border: red solid 2px; */
+color: white;
+height: 10vh;
+}
+
+.logo{
+    font-size: 24px;
+    
+    color: #333;
+    text-decoration: none;
+    /* border: red solid 2px; */
+    padding: 10px 15px;
+    width:33%;
+}
+
+.title{
+    /* border: red solid 2px; */
+    width:33%;
+    justify-content: center;
+    text-align: center;
+}
+.nav-links{
+    /* border: red solid 2px; */
+    width:30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    gap: 10%;
+    color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
