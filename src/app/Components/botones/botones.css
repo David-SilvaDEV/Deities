@@ -1,0 +1,65 @@
+/* =========================
+   CONTENEDOR GENERAL DEL NAV
+   ========================= */
+.nav-3{
+  background: #000000; /* fondo negro del header */
+}
+
+/* =========================
+   NAV: AQUÍ se controla el espacio entre botones
+   ========================= */
+.nav-3 nav{
+  display: flex;              /* convierte los items en fila */
+  justify-content: center;    /* centra el menú horizontalmente */
+  align-items: center;        /* centra verticalmente */
+  gap: 32px;                  /* 🔥 ESPACIO REAL entre botones */
+  background: #000000;
+}
+
+/* =========================
+   ITEM: cada botón del menú
+   ========================= */
+.nav-3 .item{
+  position: relative;
+  display: inline-flex;       /* permite centrar texto dentro */
+  padding: 10px 0;            /* área clickeable vertical */
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========================
+   TEXTO DEL LINK
+   ========================= */
+.nav-3 .linktext{
+  font-size: 1em;
+  color: #ffffff;
+  font-family: 'Righteous', Arial, sans-serif;
+  text-transform: uppercase;
+  position: relative;         /* necesario para el ::before */
+  transition: color 0.3s ease-in-out;
+  z-index: 2;
+}
+
+/* =========================
+   TEXTO DUPLICADO (efecto hover)
+   ========================= */
+.nav-3 .linktext::before{
+  content: attr(data-text);   /* copia el texto del atributo */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #988229;             /* color del efecto */
+  overflow: hidden;
+  max-width: 0%;              /* oculto por defecto */
+  white-space: nowrap;
+  transition: max-width 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* =========================
+   EFECTO HOVER
+   ========================= */
+.nav-3 .item:hover .linktext::before{
+  max-width: 100%;            /* revela el texto duplicado */
+}

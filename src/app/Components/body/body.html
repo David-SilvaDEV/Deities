@@ -1,0 +1,19 @@
+<section class="video-banner">
+  <video
+    #bannerVideo
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    class="banner-video"
+    (ended)="onVideoEnd($event)"
+  >
+    <source src="/Media/Videos/Body/Deitiesvideo1.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="banner-content">
+    <app-flip-btn></app-flip-btn>
+  </div>
+</section>
