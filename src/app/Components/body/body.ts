@@ -1,9 +1,10 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FlipBtn } from '../flip-btn/flip-btn';
+import { Artis } from '../artis/artis';
 
 @Component({
   selector: 'app-body',
-  imports: [FlipBtn],
+  imports: [FlipBtn, Artis],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })
