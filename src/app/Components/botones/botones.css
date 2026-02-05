@@ -1,65 +1,84 @@
 /* =========================
    CONTENEDOR GENERAL DEL NAV
    ========================= */
-.nav-3{
-  background: #000000; /* fondo negro del header */
-}
+   .nav-3{
+    background: #000000;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* =========================
+     NAV
+     ========================= */
+  .nav-3 nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;              /* 🔥 menos espacio entre links */
+    white-space: nowrap;   /* evita saltos de línea */
+    padding-left: 150px; /* 👈 muévelo */ 
+  }
+  
+  /* =========================
+     ITEM
+     ========================= */
+  .nav-3 .item{
+    position: relative;
+    display: inline-flex;
+    padding: 6px 0;        /* más compacto */
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  /* =========================
+     TEXTO
+     ========================= */
+  .nav-3 .linktext{
+    font-size: 0.60em;     /* ligeramente más pequeño */
+    color: #ffffff;
+    font-family: 'Righteous', Arial, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    z-index: 2;
+    
+  }
+  
+  /* =========================
+     TEXTO DUPLICADO (HOVER)
+     ========================= */
+  .nav-3 .linktext::before{
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: #988229;
+    overflow: hidden;
+    max-width: 0%;
+    white-space: nowrap;
+    transition: max-width 0.3s ease-in-out;
+    z-index: 1;
+  }
 
-/* =========================
-   NAV: AQUÍ se controla el espacio entre botones
-   ========================= */
-.nav-3 nav{
-  display: flex;              /* convierte los items en fila */
-  justify-content: center;    /* centra el menú horizontalmente */
-  align-items: center;        /* centra verticalmente */
-  gap: 32px;                  /* 🔥 ESPACIO REAL entre botones */
-  background: #000000;
-}
+ 
+  
+  
+  /* =========================
+     HOVER
+     ========================= */
+  .nav-3 .item:hover .linktext::before{
+    max-width: 100%;
+  }
 
-/* =========================
-   ITEM: cada botón del menú
-   ========================= */
-.nav-3 .item{
-  position: relative;
-  display: inline-flex;       /* permite centrar texto dentro */
-  padding: 10px 0;            /* área clickeable vertical */
-  background: transparent;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* =========================
-   TEXTO DEL LINK
-   ========================= */
-.nav-3 .linktext{
-  font-size: 1em;
-  color: #ffffff;
-  font-family: 'Righteous', Arial, sans-serif;
-  text-transform: uppercase;
-  position: relative;         /* necesario para el ::before */
-  transition: color 0.3s ease-in-out;
-  z-index: 2;
-}
-
-/* =========================
-   TEXTO DUPLICADO (efecto hover)
-   ========================= */
-.nav-3 .linktext::before{
-  content: attr(data-text);   /* copia el texto del atributo */
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #988229;             /* color del efecto */
-  overflow: hidden;
-  max-width: 0%;              /* oculto por defecto */
-  white-space: nowrap;
-  transition: max-width 0.3s ease-in-out;
-  z-index: 1;
-}
-
-/* =========================
-   EFECTO HOVER
-   ========================= */
-.nav-3 .item:hover .linktext::before{
-  max-width: 100%;            /* revela el texto duplicado */
-}
+  
+  @media (max-width: 768px){
+    .nav-3{
+      justify-content: center;
+    }
+  
+    .nav-3 nav{
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+  

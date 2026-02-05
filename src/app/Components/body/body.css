@@ -13,10 +13,11 @@
   left: 50%;
   min-width: 50%;
   min-height: 50%;
+  width: 60%; 
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  /* border: red 2px solid */
+   /* border: red 2px solid  */
 }
 
 /* Oscurecer un poco el video */
@@ -27,20 +28,21 @@
   z-index: 2;
 }
 
-/* Texto encima */
+/* CONTENEDOR DEL BOTÓN */
 .banner-content {
-  position: relative;
+  position: absolute; /* 👈 CLAVE */
+  inset: 0;           /* 👈 ocupa todo el banner */
   z-index: 3;
-  height: 100%;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
+
+  pointer-events: none; /* opcional */
 }
 
-.banner-content h1 {
-  font-size: 4rem;
-  letter-spacing: 6px;
+/* Permite click solo al botón */
+.banner-content app-flip-btn {
+  pointer-events: auto;
+  transform: translateY(-30px); /* 👈 súbelo */
 }

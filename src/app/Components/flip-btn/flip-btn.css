@@ -16,8 +16,8 @@ body {
   -moz-perspective: 500px;
   -ms-perspective: 500px;
   perspective: 500px;
-  top: 40%;
-  left: 45.8%;
+  top: 50%;
+  left: 50%;
   margin: -24px 0 0 -80px;
 }
 .flip a {
