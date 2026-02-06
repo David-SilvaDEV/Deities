@@ -53,13 +53,18 @@
   .artists-content h2{
     font-size: 3rem;
     letter-spacing: 6px;
-    font-family: 'Righteous', Arial, sans-serif;
+    font-family: "Anton", sans-serif;
     margin-bottom: 10px;
     transform: translateY(-35px); /* 👈 AQUÍ */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+
+
   }
   
   .artists-content p{
     font-size: 1.1rem;
     opacity: 0.85;
+    font-family: 'Cinzel', serif;
+    
   }
   

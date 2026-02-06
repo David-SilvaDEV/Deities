@@ -1,24 +1,26 @@
 body {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   background: #000000;
+  
 }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Cinzel', serif;
 }
 .flip {
   position: absolute;
-  width: 160px;
-  height: 48px;
+  width: 210px;
+  height: 45px;
   -webkit-perspective: 500px;
-  -moz-perspective: 500px;
+  -moz-perspective: 500px;  
   -ms-perspective: 500px;
   perspective: 500px;
   top: 50%;
   left: 50%;
   margin: -24px 0 0 -80px;
+  transform: scale(0.9); /* 🔽 70% del tamaño */
 }
 .flip a {
   font-weight: 400;
