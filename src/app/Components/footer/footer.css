@@ -1,0 +1,141 @@
+/* =========================
+   FOOTER PRINCIPAL
+   ========================= */
+
+   .ds-footer {
+    position: relative;              /* necesario para posicionar la imagen */
+    background: #000000;
+    color: #fff;
+    padding: 70px 5% 30px;
+    font-family: 'Righteous', Arial, sans-serif;
+    overflow: hidden;                /* evita que la imagen se salga */
+  }
+  
+  /* =========================
+     IMAGEN DECORATIVA
+     ========================= */
+  
+     .ds-footer__image {
+        position: absolute;
+        
+        bottom: 0;
+      
+        width: 100%;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+  
+  /* =========================
+     CONTENEDOR PRINCIPAL
+     ========================= */
+  
+  .ds-footer__container {
+    position: relative;
+    z-index: 2;                      /* queda encima de la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* =========================
+     BRAND
+     ========================= */
+  
+  .ds-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .ds-footer__brand img {
+    width: 42px;
+    height: auto;
+  }
+  
+  .ds-footer__brand span {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+  
+  /* =========================
+     LINKS
+     ========================= */
+  
+  .ds-footer__links {
+    display: flex;
+    gap: 28px;
+  }
+  
+  .ds-footer__links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .ds-footer__links a:hover {
+    opacity: 1;
+  }
+  
+  /* =========================
+     SOCIAL
+     ========================= */
+  
+  .ds-footer__social {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .ds-footer__social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .ds-footer__social a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     COPYRIGHT
+     ========================= */
+  
+  .ds-footer__bottom {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    opacity: 0.5;
+  }
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  
+  @media (max-width: 768px) {
+    .ds-footer__container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .ds-footer__links,
+    .ds-footer__social {
+      justify-content: center;
+    }
+  
+    .ds-footer__image {
+      width: 180px;
+      opacity: 0.18;
+    }
+  }
+  
