@@ -32,4 +32,6 @@ export class Body implements AfterViewInit {
     video.currentTime = video.duration;
     video.pause();
   }
+
+  
 }
