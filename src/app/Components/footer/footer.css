@@ -134,8 +134,17 @@
     }
   
     .ds-footer__image {
-      width: 180px;
-      opacity: 0.18;
-    }
+    position:absolute;
+    inset: 0;                 /* 🔥 ocupa todo el footer */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      /* 🔥 se ajusta sin deformarse */
+    object-position: bottom center;
+
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+}
+
   }
   
