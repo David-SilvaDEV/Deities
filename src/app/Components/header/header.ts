@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
 import { Botones } from '../botones/botones';
+import { HamburgerComponent } from '../hamburger/hamburger';
 
 @Component({
   selector: 'app-header',
-  imports: [Botones ],
+  standalone: true,
+  imports: [Botones, HamburgerComponent],
   templateUrl: './header.html',
-  styleUrl: './header.css',
+  styleUrls: ['./header.css'],
 })
 export class Header {
+
+  menuOpen = false;
+
+  toggleMenu(state: boolean) {
+    this.menuOpen = state;
+  }
 
 }

@@ -3,14 +3,30 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
-<div class="header-container">
-    <div class="logo"> 
-        <img src="\Media\Img\Logos\logoDS-.webp" alt="Deities Logo" height="40px" />
-    </div>
+<header class="header-container">
+
+  <div class="logo"> 
+    <img src="/Media/Img/Logos/logoDS-.webp" alt="Deities Logo" height="40" />
+  </div>
+
   <div class="title">
     <h1>DEITIES</h1>
   </div>
-  <div class="nav-links">
+
+  <!-- navegación desktop -->
+  <nav class="nav-links desktop">
     <app-botones></app-botones>
-  </div>
-</div>
+  </nav>
+
+  <!-- botón hamburguesa -->
+  <app-hamburger
+    class="mobile"
+    (menuToggle)="toggleMenu($event)">
+  </app-hamburger>
+
+</header>
+
+<!-- menú lateral mobile -->
+<nav class="mobile-menu" [class.open]="menuOpen">
+  <app-botones></app-botones>
+</nav>
