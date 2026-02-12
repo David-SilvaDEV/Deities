@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FlipBtn } from '../flip-btn/flip-btn';
 import { Artis } from '../artis/artis';
+import { MusicComponent } from "../music/music";
 
 @Component({
   selector: 'app-body',
-  imports: [FlipBtn, Artis],
+  imports: [FlipBtn, Artis, MusicComponent],
   templateUrl: './body.html',
   styleUrl: './body.css',
 })

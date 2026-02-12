@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Header } from '../header/header';
-import { Body } from '../body/body';
 import { Footer } from '../footer/footer';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  imports: [Header, Body, Footer ],
+  standalone: true,   // ⭐ ESTA LÍNEA FALTABA
+  imports: [Header, Footer, RouterOutlet],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
-export class Layout {
-
-}
+export class Layout {}

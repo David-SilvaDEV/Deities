@@ -1,0 +1,68 @@
+.music-section {
+    background: #111;
+    padding: 60px 20px;
+    min-height: 100vh;
+    color:white;
+    
+   
+  }
+
+  .titulo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Anton", sans-serif;
+
+  }
+  
+  /* Grid centrado */
+  .music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 30px;
+    justify-content: center;
+    
+  }
+  
+  /* Card */
+  .music-card {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.25s ease;
+    
+  }
+  
+  .music-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  /* Imagen cuadrada */
+  .music-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  /* Info debajo */
+  .info {
+    margin-top: 10px;
+    
+  }
+  
+  .info h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 4px 0;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .info p {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 0;
+  }
+  

@@ -1,13 +1,5 @@
 <section class="video-banner">
-  <video
-    #bannerVideo
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-    class="banner-video"
-    (ended)="onVideoEnd($event)"
-  >
+  <video #bannerVideo autoplay muted playsinline preload="auto" class="banner-video" (ended)="onVideoEnd($event)">
     <source src="./assets/Media/Videos/Body/Deitiesvideo1.mp4" type="video/mp4">
   </video>
 
@@ -17,4 +9,8 @@
     <app-flip-btn></app-flip-btn>
   </div>
 </section>
-  <app-artis></app-artis>
+
+<app-artis></app-artis>
+<div>
+  <p>xxx</p>
+</div>

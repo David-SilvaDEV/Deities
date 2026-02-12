@@ -1,0 +1,26 @@
+
+<section class="music-section">
+  <div class="titulo">
+    <h1>Música</h1>
+  </div> 
+
+  <div class="music-grid">
+    <div class="music-card" *ngFor="let track of tracks">
+
+      <a [href]="track.url" target="_blank" class="cover">
+        <img [src]="track.image" [alt]="track.name">
+
+        <div class="play-button">
+          ▶
+        </div>
+      </a>
+
+      <div class="info">
+        <h3>{{ track.name }}</h3>
+        <p>{{ track.artist }}</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
