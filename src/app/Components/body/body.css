@@ -46,3 +46,10 @@
   pointer-events: auto;
   transform: translateY(-30px); /* 👈 súbelo */
 }
+
+.redes{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
