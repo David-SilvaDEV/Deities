@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-botones',
-  imports: [],
+  standalone: true,
+  imports: [RouterModule], // 👈 AQUÍ ES DONDE VA
   templateUrl: './botones.html',
-  styleUrl: './botones.css',
+  styleUrls: ['./botones.css']
 })
-export class Botones {
-
-}
+export class Botones {}

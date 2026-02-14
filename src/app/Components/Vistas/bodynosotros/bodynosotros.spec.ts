@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
 
-import { Footer } from './footer';
+import { Bodynosotros } from './bodynosotros';
 
-describe('Footer', () => {
-  let component: Footer;
-  let fixture: ComponentFixture<Footer>;
+describe('Bodynosotros', () => {
+  let component: Bodynosotros;
+  let fixture: ComponentFixture<Bodynosotros>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Footer, RouterModule]
+      imports: [Bodynosotros]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Footer);
+    fixture = TestBed.createComponent(Bodynosotros);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
