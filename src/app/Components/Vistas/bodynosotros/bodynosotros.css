@@ -1,37 +1,71 @@
+/* ============================= */
+/* SECCIÓN NOSOTROS */
+/* ============================= */
+
 .nosotros {
-    position: relative;
+    position: relative; /* Permite usar ::before correctamente */
+    
+    /* Altura mínima de pantalla */
     min-height: 100vh;
-    background: url('/assets/Media/Img/nosotros-fondo.webp');
+  
+    /* Imagen de fondo (ruta correcta para Angular en deploy) */
+    background: url('../../../../../src/assets/Media/Img/nosotros-fondo.webp');
     background-size: cover;
+  
+    /* Centramos el contenido */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
-    color: #d6d0d0;
+  
+    /* Espaciado superior para que no choque con header fijo */
+    padding: 120px 20px 80px 20px;
+  
+    color: #ffffff;
     overflow: hidden;
   }
   
-  /* Capa oscura para contraste */
+  
+  /* ============================= */
+  /* CAPA OSCURA SOBRE LA IMAGEN */
+  /* ============================= */
+  
   .nosotros::before {
     content: "";
     position: absolute;
     inset: 0;
+  
+    /* Degradado oscuro elegante */
     background: linear-gradient(
       to bottom,
-      rgba(75, 74, 74, 0.85),
+      rgba(0, 0, 0, 0.85),
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.85)
     );
+  
     z-index: 0;
   }
   
+  
+  /* ============================= */
+  /* CONTENEDOR INTERNO */
+  /* ============================= */
+  
   .contenedor {
-    position: relative;
+    position: relative; /* Para estar encima del overlay */
     z-index: 1;
+  
     max-width: 900px;
+    width: 100%;
     text-align: center;
+  
+    /* Animación suave de entrada */
     animation: fadeInUp 1.4s ease-out;
   }
+  
+  
+  /* ============================= */
+  /* TÍTULO */
+  /* ============================= */
   
   .nosotros h2 {
     font-size: 3rem;
@@ -40,6 +74,11 @@
     font-weight: 700;
     text-transform: uppercase;
   }
+  
+  
+  /* ============================= */
+  /* PÁRRAFOS */
+  /* ============================= */
   
   .nosotros p {
     font-size: 1.15rem;
@@ -52,6 +91,11 @@
     font-weight: 600;
   }
   
+  
+  /* ============================= */
+  /* FRASE FINAL DESTACADA */
+  /* ============================= */
+  
   .frase-final {
     margin-top: 35px;
     font-size: 1.3rem;
@@ -59,7 +103,11 @@
     letter-spacing: 1px;
   }
   
-  /* Animación */
+  
+  /* ============================= */
+  /* ANIMACIÓN */
+  /* ============================= */
+  
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -71,18 +119,29 @@
     }
   }
   
-  /* Responsive */
+  
+  /* ============================= */
+  /* RESPONSIVE - TABLET Y MÓVIL */
+  /* ============================= */
+  
   @media (max-width: 768px) {
+  
     .nosotros {
-      padding: 60px 15px;
+      /* Evita problemas de vh en móviles */
+      min-height: auto;
+  
+      /* Más espacio arriba si el header es fijo */
+      padding: 140px 20px 60px 20px;
     }
   
     .nosotros h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
+      letter-spacing: 2px;
     }
   
     .nosotros p {
       font-size: 1rem;
+      line-height: 1.7;
     }
   
     .frase-final {
